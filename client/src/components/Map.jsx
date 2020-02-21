@@ -9,16 +9,24 @@ export default class Map extends Component {
         lat: 43.6708,
         lng: -79.3899
       },
-      zoom: 3
+      zoom: 10,
+      showInfo: false
     }
+  }
+
+   showInfo = () => {
+    this.setState({ showInfo: !this.state.showInfo });
   }
 
   render() {
     const Marker = () => {
       return (
-        <section className='labelMaker'> </section>
+        <section className='labelMaker' onClick={this.showInfo}> 
+          {this.state.showInfo ? <div className='infoWindow'><h1>test</h1></div> : null}
+        </section>
       );
     }
+
 
     const Poimarker = () => {
       return (

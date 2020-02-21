@@ -203,3 +203,11 @@ tr:hover {
   background-color: var(--secondaryColor);
   color: white;
 }
+
+/* info window on map */
+.infoWindow{
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  color: black;
+}
