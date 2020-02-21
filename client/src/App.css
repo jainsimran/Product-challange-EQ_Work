@@ -203,3 +203,54 @@ tr:hover {
   background-color: var(--secondaryColor);
   color: white;
 }
+
+/* info window on map */
+.infoWindow{
+  width: 18vw;
+  height: 15vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  transform: rotate(45deg);
+  background-color: white;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 7px 1px rgba(0,0,0,0.3);
+}
+
+.infoWindow p{
+  color: var(--fourthColor);
+  margin: 0;
+  font-weight: 400;
+  font-size: 13px;
+  position: initial;
+  width: fit-content;
+  letter-spacing: 0.1px;
+}
+
+.infoWindow h1{
+  font-size: 15px;
+  font-weight: 400;
+  margin: 2px 0;
+  text-align: left;
+}
+
+.closeBtn{
+  background: none;
+  display: block;
+  border: 0px;
+  margin: 0px;
+  padding: 2px;
+  position: absolute;
+  cursor: pointer;
+  user-select: none;
+  top: -6px;
+  right: -6px;
+  width: 30px;
+  height: 30px;
+}
+
+.boldValue{
+  font-weight: 500;
+}
