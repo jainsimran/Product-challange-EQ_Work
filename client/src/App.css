@@ -1,0 +1,205 @@
+body {
+  --primaryColor: #00171F;
+  --secondaryColor: #003459;
+  --thirdColor: #007EA7;
+  --fourthColor: #00A8E8;
+  --fifthColor: #FFFFFF;
+  font-family: 'Source Sans Pro', sans-serif;
+  }
+
+.contentWrapper {
+  margin-left: 200px;
+  width: calc(100% - 200px);
+}
+
+.cardEffect{
+  padding: 1%;
+  border: 1px rgba(255, 255, 255, 0.03) solid;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 98%;
+  height: 95vh;
+}
+
+.homeHeading{
+  background: linear-gradient(90deg, rgba(3, 78, 144, 0.9) 0%, rgba(25, 180, 215, 0.9) 100%);
+  font-family: Montserrat;
+}
+
+.homeHeading h3,p{
+  letter-spacing: -1px;
+  font-size: 50px;
+  font-weight: 400;
+  color: var(--fifthColor);
+  margin: 0;
+  text-align: center;
+  top: 40%;
+  position: absolute;
+  width: calc(100% - 250px);
+}
+
+.homeHeading p{
+  top: 50%;
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+input,
+select,
+label{
+  margin: 10px 5px;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+input{
+  color: black;
+}
+
+select{
+  font-size: 18px;
+  color: #60666d;
+}
+
+h2{
+  margin: 1%;
+  font-weight: 400;
+}
+
+h2,
+input{
+  font-size: 20px;
+  display: inline;
+}
+
+.searchBox{
+  float: right;
+  font-weight: 300;
+}
+
+.event-marker img{
+  width: 10%;
+}
+
+.cluster-marker{
+  color: #fff;
+  background: var(--primaryColor);
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.highlight{
+  background-color: var(--secondaryColor)!important;
+  color: white;
+}
+
+h1{
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 24px;
+}
+
+/*************** Css for data table section */
+
+.scrolltable{
+  max-height: 85vh;
+  overflow-y:auto;
+  width: 100%;
+  margin-top: 20px;
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+table th{
+  background-color: var(--thirdColor);
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: initial;
+  text-transform: uppercase;
+}
+
+table td{
+  font-weight: 200;
+}
+
+table td,
+table th
+{
+  padding: 2%;
+}
+
+tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+/*************** Css for map section */
+.labelMaker{
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 50% 0;
+  background: var(--fourthColor);
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 50%;
+  top: 50%;
+  margin: -20px 0 0 -20px;
+}
+
+
+/*************** Navigation  */
+.logo{
+  width: 50%;
+}
+
+.nav {
+  background-color: var(--primaryColor);
+  width: 200px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin-top: 0;
+  position: fixed;
+  padding: 0;
+}
+.nav ul{
+  list-style-type: none;
+  margin: 5%;
+  padding: 0;
+}
+
+.nav li {
+  display: block;
+  margin: 20% 0%;
+  letter-spacing: 1.5px;
+  padding: 0 5%;
+}
+
+.nav li a {
+  font-size: 18px;
+  color: var(--fifthColor);
+  font-weight: 200;
+  text-decoration: none;
+}
+
+.nav li a.active {
+  color: var(--fourthColor);
+}
+
+.nav li:hover {
+  background-color: var(--secondaryColor);
+  color: white;
+}
