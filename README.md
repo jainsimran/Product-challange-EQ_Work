@@ -1,6 +1,6 @@
 EQ Works Coding Challange
 
-Prerequisites
+### Prerequisites
 You'll need to have git and node installed in your system.
 
 
@@ -12,13 +12,18 @@ Note that these environment variables are same as provided in the challange.
 As per the requirements, I am not adding them in this repository.
 I have provided the contents of .env file in the email. If you do not have it, please feel free to contact me.
 
-Run development server:
+* Run development server:
+```
 cd server
 npm install
 npm run dev
+```
 
 
-Run development client:
+* Run development client:
+```
+npm install
 npm start 
+```
 
 Open the web browser to http://localhost:3000//
