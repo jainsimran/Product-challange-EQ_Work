@@ -1,16 +1,12 @@
-const express = require('express')
-const pg = require('pg')
+const express = require('express');
+const pg = require('pg');
 
-const app = express()
+const app = express();
+require('dotenv').config();
 // configs come from standard PostgreSQL env vars
 // https://www.postgresql.org/docs/9.6/static/libpq-envars.html
-const pool = new pg.Pool({
-  host: 'work-samples-db.cx4wctygygyq.us-east-1.rds.amazonaws.com',
-  port: 5432,
-  database: 'work_samples',
-  user: 'readonly',
-  password: 'w2UIO@#bg532!',
-})
+
+const pool = new pg.Pool();
 
 const queryHandler = (req, res, next) => {
   pool.query(req.sqlQuery).then((r) => {
