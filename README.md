@@ -4,6 +4,9 @@ EQ Works Coding Challange
 You'll need to have git and node installed in your system.
 
 
+
+### Build and Run the project
+
 Please note that you will need to set environment variables before running the nodejs server
 Follow these steps as following:
 1. Create .env file in server folder.
