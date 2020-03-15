@@ -3,8 +3,6 @@ const pg = require('pg');
 
 const app = express();
 require('dotenv').config();
-// configs come from standard PostgreSQL env vars
-// https://www.postgresql.org/docs/9.6/static/libpq-envars.html
 
 const pool = new pg.Pool();
 
@@ -14,9 +12,18 @@ const queryHandler = (req, res, next) => {
   }).catch(next)
 }
 
-app.get('/', (req, res) => {
+app.listen(process.env.PORT || 5555, (err) => {
+  if (err) {
+    console.error(err)
+    process.exit(1)
+  } else {
+    console.log(`Running on ${process.env.PORT || 5555}`)
+  }
+})
+
+app.get('/', (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
-  res.send('Welcome to EQ Works 😎')
+  res.send('Welcome to EQ Works 😎');
 })
 
 app.get('/events/hourly', (req, res, next) => {
@@ -88,14 +95,7 @@ app.get('/join/poi/stats_hourly', (req, res, next) => {
   return next()
 }, queryHandler)
 
-app.listen(process.env.PORT || 5555, (err) => {
-  if (err) {
-    console.error(err)
-    process.exit(1)
-  } else {
-    console.log(`Running on ${process.env.PORT || 5555}`)
-  }
-})
+
 
 // last resorts
 process.on('uncaughtException', (err) => {
